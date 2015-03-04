@@ -44,7 +44,8 @@
     
     if (central.state == CBCentralManagerStatePoweredOn) {
         // Scan for devices
-        [_centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:SERVICE_UUID]] options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+//        [_centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:SERVICE_UUID]] options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+                [_centralManager scanForPeripheralsWithServices:nil options:nil];
         NSLog(@"Scanning started");
         lblLampStatus.text = @"Scanning started";
     }
@@ -55,15 +56,19 @@
     NSLog(@"Discovered %@ at %@", peripheral.name, RSSI);
     lblLampStatus.text = [NSString stringWithFormat:@"Discovered %@ at %@", peripheral.name, RSSI];
     
-    if (_discoveredPeripheral != peripheral) {
-        // Save a local copy of the peripheral, so CoreBluetooth doesn't get rid of it
-        _discoveredPeripheral = peripheral;
+    if ([peripheral.name isEqualToString:@"HWBLE"]) {
+        if (_discoveredPeripheral != peripheral) {
+            // Save a local copy of the peripheral, so CoreBluetooth doesn't get rid of it
+            _discoveredPeripheral = peripheral;
+            
+            // And connect
+            NSLog(@"Connecting to peripheral %@", peripheral);
+            lblLampStatus.text = [NSString stringWithFormat:@"Connecting to peripheral %@", peripheral];
+            [_centralManager connectPeripheral:peripheral options:nil];
+        }
         
-        // And connect
-        NSLog(@"Connecting to peripheral %@", peripheral);
-        lblLampStatus.text = [NSString stringWithFormat:@"Connecting to peripheral %@", peripheral];
-        [_centralManager connectPeripheral:peripheral options:nil];
     }
+    
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
@@ -219,16 +224,33 @@
 - (IBAction)btnOnPressed {
     NSLog(@"btnOn Pressed!");
     lblLampStatus.text = @"btnOn Pressed!";
-    char dataByte = 1;
-    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:&dataByte length:1]];
+    //char dataByte = 1;
+    //    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:&dataByte length:1]];
+    
+    char dataByte[2];
+    dataByte[0] = 01;
+    dataByte[1] = 00;
+    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:dataByte length:2]];
+    dataByte[0] = 01;
+    dataByte[1] = 01;
+    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:dataByte length:2]];
 
 }
 
 - (IBAction)btnOffPressed {
     NSLog(@"btnOff Pressed!");
     lblLampStatus.text = @"btnOff Pressed!";
-    char dataByte = 0;
-    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:&dataByte length:1]];
+//    char dataByte = 0;
+//    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:&dataByte length:1]];
+    char dataByte[2] ;
+    dataByte[0] = 01;
+    dataByte[1] = 05;
+    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:dataByte length:2]];
+
+    dataByte[0] = 01;
+    dataByte[1] = 06;
+    [self writeCharacteristic:_discoveredPeripheral sUUID:SERVICE_UUID cUUID:CHARACTERISTIC_UUID data:[NSData dataWithBytes:dataByte length:2]];
+    
     
 }
 

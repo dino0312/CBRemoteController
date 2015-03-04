@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317C33031A336E1A000AA515 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF5F151A0C7D20009480DC /* ViewController.m */; };
+		317C33041A336E1A000AA515 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF5F121A0C7D20009480DC /* AppDelegate.m */; };
+		317C33051A336E1A000AA515 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF5F0F1A0C7D20009480DC /* main.m */; };
+		317C33071A336E1A000AA515 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECF5F331A0C7D53009480DC /* CoreBluetooth.framework */; };
+		317C33081A336E1A000AA515 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECF5F341A0C7D53009480DC /* CoreGraphics.framework */; };
+		317C33091A336E1A000AA515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECF5F351A0C7D53009480DC /* Foundation.framework */; };
+		317C330A1A336E1A000AA515 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECF5F361A0C7D53009480DC /* UIKit.framework */; };
+		317C330C1A336E1A000AA515 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECF5F171A0C7D20009480DC /* Main.storyboard */; };
+		317C330D1A336E1A000AA515 /* remotecontrol.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA9D2951A0D1F1C006BA631 /* remotecontrol.png */; };
+		317C330E1A336E1A000AA515 /* bulb_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC26D511A0DFD0F008C8088 /* bulb_5.png */; };
+		317C330F1A336E1A000AA515 /* bulb_6.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC26D521A0DFD0F008C8088 /* bulb_6.png */; };
+		317C33101A336E1A000AA515 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA9D2931A0D1E86006BA631 /* LaunchScreen.xib */; };
+		317C33111A336E1A000AA515 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECF5F1A1A0C7D20009480DC /* Images.xcassets */; };
 		EEA9D2941A0D1E86006BA631 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA9D2931A0D1E86006BA631 /* LaunchScreen.xib */; };
 		EEA9D2961A0D1F1C006BA631 /* remotecontrol.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA9D2951A0D1F1C006BA631 /* remotecontrol.png */; };
 		EEC26D531A0DFD0F008C8088 /* bulb_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC26D511A0DFD0F008C8088 /* bulb_5.png */; };
@@ -34,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		317C33151A336E1A000AA515 /* CBRemoteController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBRemoteController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		317C33161A336E1A000AA515 /* CBRemoteController copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CBRemoteController copy-Info.plist"; path = "/Users/dino/Work/git/CBRemoteController/CBRemoteController copy-Info.plist"; sourceTree = "<absolute>"; };
 		EEA9D2931A0D1E86006BA631 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EEA9D2951A0D1F1C006BA631 /* remotecontrol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remotecontrol.png; sourceTree = "<group>"; };
 		EEC26D511A0DFD0F008C8088 /* bulb_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulb_5.png; sourceTree = "<group>"; };
@@ -58,6 +73,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		317C33061A336E1A000AA515 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317C33071A336E1A000AA515 /* CoreBluetooth.framework in Frameworks */,
+				317C33081A336E1A000AA515 /* CoreGraphics.framework in Frameworks */,
+				317C33091A336E1A000AA515 /* Foundation.framework in Frameworks */,
+				317C330A1A336E1A000AA515 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EECF5F071A0C7D20009480DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,6 +112,7 @@
 				EECF5F261A0C7D20009480DC /* CBRemoteControllerTests */,
 				EECF5F0B1A0C7D20009480DC /* Products */,
 				EECF5F3B1A0C7D69009480DC /* Frameworks */,
+				317C33161A336E1A000AA515 /* CBRemoteController copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +121,7 @@
 			children = (
 				EECF5F0A1A0C7D20009480DC /* 遙控燈泡君.app */,
 				EECF5F231A0C7D20009480DC /* CBRemoteControllerTests.xctest */,
+				317C33151A336E1A000AA515 /* CBRemoteController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +185,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		317C33011A336E1A000AA515 /* CBRemoteControllerD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 317C33121A336E1A000AA515 /* Build configuration list for PBXNativeTarget "CBRemoteControllerD" */;
+			buildPhases = (
+				317C33021A336E1A000AA515 /* Sources */,
+				317C33061A336E1A000AA515 /* Frameworks */,
+				317C330B1A336E1A000AA515 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CBRemoteControllerD;
+			productName = CBRemoteController;
+			productReference = 317C33151A336E1A000AA515 /* CBRemoteController.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EECF5F091A0C7D20009480DC /* CBRemoteController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EECF5F2D1A0C7D20009480DC /* Build configuration list for PBXNativeTarget "CBRemoteController" */;
@@ -203,6 +248,7 @@
 				TargetAttributes = {
 					EECF5F091A0C7D20009480DC = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 76QPPZCRA8;
 					};
 					EECF5F221A0C7D20009480DC = {
 						CreatedOnToolsVersion = 6.1;
@@ -225,11 +271,25 @@
 			targets = (
 				EECF5F091A0C7D20009480DC /* CBRemoteController */,
 				EECF5F221A0C7D20009480DC /* CBRemoteControllerTests */,
+				317C33011A336E1A000AA515 /* CBRemoteControllerD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		317C330B1A336E1A000AA515 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317C330C1A336E1A000AA515 /* Main.storyboard in Resources */,
+				317C330D1A336E1A000AA515 /* remotecontrol.png in Resources */,
+				317C330E1A336E1A000AA515 /* bulb_5.png in Resources */,
+				317C330F1A336E1A000AA515 /* bulb_6.png in Resources */,
+				317C33101A336E1A000AA515 /* LaunchScreen.xib in Resources */,
+				317C33111A336E1A000AA515 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EECF5F081A0C7D20009480DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +313,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		317C33021A336E1A000AA515 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317C33031A336E1A000AA515 /* ViewController.m in Sources */,
+				317C33041A336E1A000AA515 /* AppDelegate.m in Sources */,
+				317C33051A336E1A000AA515 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EECF5F061A0C7D20009480DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +363,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		317C33131A336E1A000AA515 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "CBRemoteController copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = CBRemoteController;
+			};
+			name = Debug;
+		};
+		317C33141A336E1A000AA515 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "CBRemoteController copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = CBRemoteController;
+			};
+			name = Release;
+		};
 		EECF5F2B1A0C7D20009480DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -374,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CBRemoteController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "遙控燈泡君";
@@ -385,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CBRemoteController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "遙控燈泡君";
@@ -428,6 +522,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		317C33121A336E1A000AA515 /* Build configuration list for PBXNativeTarget "CBRemoteControllerD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				317C33131A336E1A000AA515 /* Debug */,
+				317C33141A336E1A000AA515 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EECF5F051A0C7D20009480DC /* Build configuration list for PBXProject "CBRemoteController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
